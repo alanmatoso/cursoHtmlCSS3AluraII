@@ -69,6 +69,7 @@
     background-color: #999;
     color: #FFF;
     border-bottom: .5em solid #851944;
+    position: relative;
 }
 
 .blog small {
@@ -97,3 +98,96 @@ main {
     padding-bottom: 0;
     float: none;
 }
+
+header {
+    position: relative;
+}
+
+.palavra-home {
+    color: #D5447E;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.eficiencia {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+}
+
+.boas-praticas {
+    position: absolute;
+    top: 10%;
+    left: 68%;
+}
+.codigo-limpo {
+    position: absolute;
+    top: 75%;
+    left: 25%;
+}
+.css3 {
+    position: absolute;
+    top: 75%;
+    left: 80%;
+}
+
+.html5 {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+}
+.javascript {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+}
+.acessibilidade {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+.responsivo {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+}
+.otimizacoes {
+    position: absolute;
+    top: 75%;
+    left: 15%;
+}
+.agilidade {
+    position: absolute;
+    top: 75%;
+    left: 65%;
+}
+.design {
+    position: absolute;
+    top: 10%;
+    left: 85%;
+}
+
+.blog li {
+    width: 30%;
+}
+
+.blog .mais-recente {
+    background-color: white;
+    background-color: #F2FFFC;
+}
+
+.blog .mais-recente a {
+    color: #F26;
+}
+
+.blog .inicio-post {
+    color: #000;
+    background-color: #F2FFFC;
+    padding: 1.5em;
+    height: 8em;
+    position: absolute;
+    right: 4em;
+    left: 30%;
+    top: 4em;
+}
+
+
