@@ -129,3 +129,7 @@ main {
     right: 0;
     height: 15.6em;
 }
+
+.foto-home{
+    border-radius: 100%;
+}
