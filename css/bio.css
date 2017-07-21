@@ -6,10 +6,24 @@
     width: 30ch;
     box-sizing: border-box;
 }
+
+blockquote:before {
+    content: '“';
+    font-size: 10em;
+    color: #bbb;
+    position: absolute;
+    line-height: .8;
+}
+
+.citacao-bio > p {
+    position: relative;
+}
+
 .citacao-bio:hover,
 .citacao-bio:focus {
     box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
 }
+
 
 blockquote:nth-of-type(odd){
     float: right;
@@ -30,4 +44,12 @@ blockquote:nth-of-type(even){
 blockquote:nth-of-type(even):hover,
 blockquote:nth-of-type(even):focus {
     transform: rotate(-5deg) scale(1.2);
+}
+
+.container > p:first-letter{
+    font-size: 200%;
+    font-weight: blod;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    padding-right: 2px;
 }
