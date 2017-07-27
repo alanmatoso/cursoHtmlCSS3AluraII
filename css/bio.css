@@ -5,6 +5,8 @@
     margin: 1em 2em;
     width: 30ch;
     box-sizing: border-box;
+    transition: box-shadow 1s, transform 1s;
+    transition-delay: 0s, 1s;
 }
 
 blockquote:before {
@@ -52,4 +54,38 @@ blockquote:nth-of-type(even):focus {
     color: #3C1D3D;
     text-shadow: 1px 1px #000;
     padding-right: 2px;
+}
+
+table {
+    font-family: inherit;
+    border-collapse: separate;
+    border-spacing: 0.25em;
+    padding-top: 1em;
+}
+
+thead {
+    background-color: #3C1D3D;
+    color: #FFF;
+    font-weight: bold;
+}
+
+tbody th{
+    background-color: #851944;
+    color: #FFF;
+    font-weight: bold;
+}
+
+tbody td {
+    background-color: #EEE;
+    color: inherit;
+}
+
+td,th {
+    padding: 1em;
+}
+
+td[colspan="2"]{
+    vertical-align: middle;
+    text-align: center;
+    font-style: italic;
 }

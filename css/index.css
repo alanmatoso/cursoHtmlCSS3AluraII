@@ -1,3 +1,8 @@
+body {
+    /* sobrescreve o site.css */
+    display: block;
+}
+
 .foto-home {
     height: 200px;
     border-radius: 50%;
@@ -7,6 +12,11 @@
     color: #99A;
     line-height: 1;
     padding: 2em;
+}
+
+.saudacao:hover em,
+.saudacao:focus  em{
+    animation-play-state: paused;
 }
 .saudacao-inicio {
     font-size: 3em;
@@ -26,7 +36,31 @@
     -webkit-transform: rotate(-5deg) skew(-10deg);
             transform: rotate(-5deg) skew(-10deg);
     display: inline-block;
+    -webkit-animation: flutuar 1s infinite;
+    animation: flutuar 1 infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    position: relative;
 }
+
+@-webkit-keyframes flutuar {
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
+}
+
+@keyframes flutuar {
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
+}
+
 .botao-index {
     font-size: 1.25em;
     background-color: #851944;
@@ -37,6 +71,15 @@
     margin: 2em auto;
     display: block;
     text-align: center;
+    text-decoration: none;
+    transition: 0.5;
+}
+
+.botao-index:hover, 
+.botao-index:focus {
+    box-shadow: 0 0 1em #FA9 ;
+    color: #FFF;
+    background-color: #C54974;
 }
 .secao-inicio {
     padding: 2em;
@@ -66,16 +109,28 @@
     color: #FFF;
 }
 .trabalhos ul {
-    overflow: hidden;
-    border: .5em solid black;
+    display: flex;
 }
 .trabalhos li {
-    float: left;
-    width: 33.333%;
+    flex: 1;
+    border: .5em solid #000;
 }
 .trabalhos img {
     width: 100%;
     display: block;
+}
+
+.trabalhos li:first-child {
+    order: 2;
+    transform: scale(1.2);
+}
+
+.trabalhos li:nth-child(2) {
+    order: 1;
+}
+
+.trabalhos li:last-child {
+    order: 3;
 }
 .blog {
     background-color: #999;
@@ -130,7 +185,7 @@ body {
     -webkit-perspective-origin: 50% 160px;
             perspective-origin: 50% 160px;
 }
-.palavras-home {
+.palavra-home {
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
     position: absolute;
@@ -138,7 +193,25 @@ body {
     right: 0;
     top: 0;
     left: 0;
+    animation: aparece 2s;
+    -webkit-animation: aparece 2s;
+
 }
+
+-webkit-@keyframes aparece {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+}
+
+@keyframes aparece {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+}
+
 .palavra-home {
     font-family: "Shadows Into Light", cursive;
     font-weight: bold;
@@ -256,6 +329,11 @@ body {
 
     font-size: 1.2em;
     font-family: "Open Sans Condensed", sans-serif;
+    
+    animation: aparece 0.5s;
+    animation-delay: 2s;
+    
+    animation-fill-mode: backwards;
 }
 .blog .inicio-post {
     position: absolute;
